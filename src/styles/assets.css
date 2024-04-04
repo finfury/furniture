@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --black: #363838;
+    --dark-green: #2C5420;
+    --green: #6EA023;
+    --light-green: #ADD285;
+    --grey: #DFDFDF;
+    --ashen: #A1A1A1;
+
+    --one: 1200;
+    --two: 950;
+    --three: 760;
+    --four: 460;
+    --five: 300;
+}
+
+.container {
+    max-width: 85%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+@media (max-width: 450px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
