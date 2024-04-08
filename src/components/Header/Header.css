@@ -1,6 +1,6 @@
 .header {
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     display: block;
     left: 0;
     top: 0;
@@ -35,10 +35,40 @@
 }
 
 .header__menu_item {
+    position: relative;
     font-size: 16px;
     font-weight: 700;
     color: var(--dark-green);
     white-space: nowrap;
+    transition: all 0.3s ease;
+}
+@media (hover: hover) {
+    .header__menu_item:hover {
+        color: var(--light-green);
+    }
+    .header__menu_item.active:hover {
+        color: var(--dark-green);
+    }
+}
+.header__menu_item:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    display: block;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    border-radius: 3px;
+    background-color: var(--dark-green);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.header__menu_item.active:after {
+    opacity: 1;
+    width: 100%;
 }
 
 .header__menu_logo {
