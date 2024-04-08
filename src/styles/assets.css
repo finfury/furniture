@@ -21,6 +21,31 @@
     margin: 0 auto;
 }
 
+.header-fullscreen {
+    padding-top: 114px;
+    height: 100vh;
+}
+
+.header-padding-top {
+    padding-top: 114px;
+}
+
+.header-margin-top {
+    margin-top: 114px;
+}
+
+@media (max-width: 686px) {
+    .header-fullscreen {
+        padding-top: 75px;
+    }
+    .header-padding-top {
+        padding-top: 75px;
+    }
+    .header-margin-top {
+        margin-top: 75px;
+    }
+}
+
 @media (max-width: 450px) {
     .container {
         max-width: 100%;

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './Header.css'
+import {NavLink} from 'react-router-dom'
 
 
 function Header() {
@@ -9,17 +10,17 @@ function Header() {
         <div className="container">
             <nav className={isActiveMenu ? "header__menu active" : "header__menu"}>
                 <div className="header__section">
-                    <a href={'#'} className="header__menu_item">Главная</a>
-                    <a href={'#'} className="header__menu_item">Каталог</a>
+                    <NavLink to={'/main'} className="header__menu_item">Главная</NavLink>
+                    <NavLink to={'/gallery'} className="header__menu_item">Каталог</NavLink>
                 </div>
                 <div className="header__section section-img">
-                    <a href={'#'} className="header__menu_item">
+                    <NavLink to={'/main'} className="header__menu_item">
                         <img src="../../../img/logo.png" alt="lorem tagline" className="header__menu_logo" />
-                    </a>
+                    </NavLink>
                 </div>
                 <div className="header__section">
-                    <a href={'#'} className="header__menu_item">О нас</a>
-                    <a href={'#'} className="header__menu_item">Контакты</a>
+                    <NavLink to={'/about'} className="header__menu_item">О нас</NavLink>
+                    <NavLink to={'/contacts'} className="header__menu_item">Контакты</NavLink>
                 </div>
             </nav>
             <div className={isActiveMenu ? "header__burger active" : "header__burger"}>

@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: inherit;
 }
 
-ul, ul li {
+ul, ol, ul li, ol li {
     list-style: none;
 }
 
@@ -117,4 +117,9 @@ html, body {
     width: 100vw;
     overflow-x: hidden;
     margin: 0;
+}
+
+* {
+    scrollbar-width: thin; /* "auto" or "thin" */
+    scrollbar-color: grey transparent; /* scroll thumb and track */
 }
