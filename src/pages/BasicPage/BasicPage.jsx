@@ -7,7 +7,6 @@ import Footer from '../../components/Footer/Footer.jsx'
 
 function BasicPage({children}) {
     return <React.Fragment>
-        <Header />
         <main className="main">
             {children}
         </main>

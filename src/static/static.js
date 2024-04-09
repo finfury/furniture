@@ -1,3 +1,5 @@
+export const mapURL = 'https://yandex.ru/map-widget/v1/?um=constructor%3A0469fb0e217e9dbdb1758139b4566bc84f4de607043cdc74de1ecd13649da978&amp;source=constructor'
+
 export const categories = [
     {
         id: 1,
@@ -28,29 +30,12 @@ export const goods = [
         category: 1,
         info: {
             photos: [
-                "good-1.jpg",
-                "good-1.jpg",
-                "good-2.jpg",
-                "good-2.jpg",
-                "good-1.jpg",
-                "good-2.jpg",
-                "good-1.jpg",
-                "good-2.jpg",
             ],
             description: [
-                "Верхняя часть стула реализована в форме икосаэдра, что придает ему уникальный внешний вид.",
-                "Стильный дизайн стула позволит ему идеально вписаться в любой современный интерьер.",
-                "Этот стул - прекрасный выбор для тех, кто ценит не только удобство, но и эстетическую привлекательность мебели.",
             ],
             materials: [
-                "Сиденье и каркас выполнены из плотного материала МДФ в сочетании с шпоном различных цветов.",
             ],
             extra: [
-                "Артикул: 15106",
-                "Стиль: Современный",
-                "Цвет: Орех",
-                "Указана начальная цена за стандартную компоновку 75х30х53.",
-                "В стоимость не входит доставка и монтаж.",
             ],
         },
     }, {
@@ -60,7 +45,7 @@ export const goods = [
         materials: "Материал: МДФ, шпон",
         size: "Размеры: 75х30х53 (см)",
         poster: "gallery-2.jpg",
-        category: 2,
+        category: 1,
         info: {
             photos: [
                 "good-1.jpg",
@@ -95,7 +80,7 @@ export const goods = [
         materials: "Материал: МДФ, шпон",
         size: "Размеры: 75х30х53 (см)",
         poster: "gallery-3.jpg",
-        category: 3,
+        category: 1,
         info: {
             photos: [
                 "good-1.jpg",
@@ -200,7 +185,7 @@ export const goods = [
         materials: "Материал: МДФ, шпон",
         size: "Размеры: 75х30х53 (см)",
         poster: "gallery-6.jpg",
-        category: 2,
+        category: 1,
         info: {
             photos: [
                 "good-1.jpg",
@@ -235,6 +220,7 @@ export const goods = [
         materials: "Материал: МДФ, шпон",
         size: "Размеры: 75х30х53 (см)",
         poster: "gallery-7.jpg",
+        category: 1,
         info: {
             photos: [
                 "good-1.jpg",
@@ -269,7 +255,7 @@ export const goods = [
         materials: "Материал: МДФ, шпон",
         size: "Размеры: 75х30х53 (см)",
         poster: "gallery-8.jpg",
-        category: 3,
+        category: 1,
         info: {
             photos: [
                 "good-1.jpg",
@@ -339,7 +325,7 @@ export const goods = [
         materials: "Материал: МДФ, шпон",
         size: "Размеры: 75х30х53 (см)",
         poster: "gallery-10.jpg",
-        category: 2,
+        category: 1,
         info: {
             photos: [
                 "good-1.jpg",

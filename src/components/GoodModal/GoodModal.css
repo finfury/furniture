@@ -11,6 +11,7 @@
     position: relative;
     padding: 45%;
     outline: none;
+    cursor: grab;
 }
 
 .good-slide_img {

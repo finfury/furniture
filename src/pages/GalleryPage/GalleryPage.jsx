@@ -1,20 +1,16 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './GalleryPage.css'
 import BasicPage from '../BasicPage/BasicPage.jsx'
 import Modal from '../../components/Modal/Modal.jsx'
 import GoodModal from '../../components/GoodModal/GoodModal.jsx'
-import {bodyLock} from '../../helpers/lock.js'
-import {categories} from '../../static/static.js'
+import {categories, goods} from '../../static/static.js'
+import GalleryItem from '../../components/GalleryItem/GalleryItem.jsx'
 
 
 function GalleryPage() {
-    const [activeModal, setActiveModal] = useState(false)
     const [activeCategory, setActiveCategory] = useState(1)
 
     return <BasicPage>
-        <Modal active={activeModal} setActive={setActiveModal}>
-            <GoodModal setActiveModal={setActiveModal} />
-        </Modal>
         <div className="gallery-categories header-padding-top">
             <ul className="gallery-categories__list">
                 {categories.map(category => {
@@ -30,128 +26,29 @@ function GalleryPage() {
         </div>
         <div className="gallery">
             <div className="gallery__section standard">
-                <div onClick={() => {
-                    bodyLock(true);
-                    setActiveModal(true)
-                }} className="item-gallery big">
-                    <div className="item-gallery__photo">
-                        <img src="../../../img/gallery-1.jpg" className="item-gallery__photo_img" />
-                    </div>
-                    <div className="item-gallery__description">
-                        <a href="" className="item-gallery__description_title">Барный стул "Комета"</a>
-                        <p className="item-gallery__description_price item-gallery_text">47000 руб</p>
-                        <p className="item-gallery__description_material item-gallery_text">Материал: МДФ, шпон</p>
-                        <p className="item-gallery__description_size item-gallery_text">Размеры: 75х30х53 (см)</p>
-                    </div>
-                </div>
-                <div className="item-gallery">
-                    <div className="item-gallery__photo">
-                        <img src="../../../img/gallery-2.jpg" className="item-gallery__photo_img" />
-                    </div>
-                    <div className="item-gallery__description">
-                        <a href="" className="item-gallery__description_title">Барный стул "Комета"</a>
-                        <p className="item-gallery__description_price item-gallery_text">47000 руб</p>
-                        <p className="item-gallery__description_material item-gallery_text">Материал: МДФ, шпон</p>
-                        <p className="item-gallery__description_size item-gallery_text">Размеры: 75х30х53 (см)</p>
-                    </div>
-                </div>
-                <div className="item-gallery">
-                    <div className="item-gallery__photo">
-                        <img src="../../../img/gallery-3.jpg" className="item-gallery__photo_img" />
-                    </div>
-                    <div className="item-gallery__description">
-                        <a href="" className="item-gallery__description_title">Барный стул "Комета"</a>
-                        <p className="item-gallery__description_price item-gallery_text">47000 руб</p>
-                        <p className="item-gallery__description_material item-gallery_text">Материал: МДФ, шпон</p>
-                        <p className="item-gallery__description_size item-gallery_text">Размеры: 75х30х53 (см)</p>
-                    </div>
-                </div>
-                <div className="item-gallery">
-                    <div className="item-gallery__photo">
-                        <img src="../../../img/gallery-4.jpg" className="item-gallery__photo_img" />
-                    </div>
-                    <div className="item-gallery__description">
-                        <a href="" className="item-gallery__description_title">Барный стул "Комета"</a>
-                        <p className="item-gallery__description_price item-gallery_text">47000 руб</p>
-                        <p className="item-gallery__description_material item-gallery_text">Материал: МДФ, шпон</p>
-                        <p className="item-gallery__description_size item-gallery_text">Размеры: 75х30х53 (см)</p>
-                    </div>
-                </div>
-                <div className="item-gallery">
-                    <div className="item-gallery__photo">
-                        <img src="../../../img/gallery-5.jpg" className="item-gallery__photo_img" />
-                    </div>
-                    <div className="item-gallery__description">
-                        <a href="" className="item-gallery__description_title">Барный стул "Комета"</a>
-                        <p className="item-gallery__description_price item-gallery_text">47000 руб</p>
-                        <p className="item-gallery__description_material item-gallery_text">Материал: МДФ, шпон</p>
-                        <p className="item-gallery__description_size item-gallery_text">Размеры: 75х30х53 (см)</p>
-                    </div>
-                </div>
-            </div>
-            {/*<ul className="gallery__section standard">*/}
+                {goods.filter(good => good.category === activeCategory).map((good, index, array) => {
+                    if (index > (array.length - 1) / 2) return
 
-            {/*</ul>
-            <ul className="gallery__section reverse">*/}
-            <div className="gallery__section reverse">
-                <div className="item-gallery">
-                    <div className="item-gallery__photo">
-                        <img src="../../../img/gallery-6.jpg" className="item-gallery__photo_img" />
-                    </div>
-                    <div className="item-gallery__description">
-                        <a href="" className="item-gallery__description_title">Барный стул "Комета"</a>
-                        <p className="item-gallery__description_price item-gallery_text">47000 руб</p>
-                        <p className="item-gallery__description_material item-gallery_text">Материал: МДФ, шпон</p>
-                        <p className="item-gallery__description_size item-gallery_text">Размеры: 75х30х53 (см)</p>
-                    </div>
-                </div>
-                <div className="item-gallery">
-                    <div className="item-gallery__photo">
-                        <img src="../../../img/gallery-7.jpg" className="item-gallery__photo_img" />
-                    </div>
-                    <div className="item-gallery__description">
-                        <a href="" className="item-gallery__description_title">Барный стул "Комета"</a>
-                        <p className="item-gallery__description_price item-gallery_text">47000 руб</p>
-                        <p className="item-gallery__description_material item-gallery_text">Материал: МДФ, шпон</p>
-                        <p className="item-gallery__description_size item-gallery_text">Размеры: 75х30х53 (см)</p>
-                    </div>
-                </div>
-                <div className="item-gallery big">
-                    <div className="item-gallery__photo">
-                        <img src="../../../img/gallery-8.jpg" className="item-gallery__photo_img" />
-                    </div>
-                    <div className="item-gallery__description">
-                        <a href="" className="item-gallery__description_title">Барный стул "Комета"</a>
-                        <p className="item-gallery__description_price item-gallery_text">47000 руб</p>
-                        <p className="item-gallery__description_material item-gallery_text">Материал: МДФ, шпон</p>
-                        <p className="item-gallery__description_size item-gallery_text">Размеры: 75х30х53 (см)</p>
-                    </div>
-                </div>
-                <div className="item-gallery">
-                    <div className="item-gallery__photo">
-                        <img src="../../../img/gallery-9.jpg" className="item-gallery__photo_img" />
-                    </div>
-                    <div className="item-gallery__description">
-                        <a href="" className="item-gallery__description_title">Барный стул "Комета"</a>
-                        <p className="item-gallery__description_price item-gallery_text">47000 руб</p>
-                        <p className="item-gallery__description_material item-gallery_text">Материал: МДФ, шпон</p>
-                        <p className="item-gallery__description_size item-gallery_text">Размеры: 75х30х53 (см)</p>
-                    </div>
-                </div>
-                <div className="item-gallery">
-                    <div className="item-gallery__photo">
-                        <img src="../../../img/gallery-10.jpg" className="item-gallery__photo_img" />
-                    </div>
-                    <div className="item-gallery__description">
-                        <a href="" className="item-gallery__description_title">Барный стул "Комета"</a>
-                        <p className="item-gallery__description_price item-gallery_text">47000 руб</p>
-                        <p className="item-gallery__description_material item-gallery_text">Материал: МДФ, шпон</p>
-                        <p className="item-gallery__description_size item-gallery_text">Размеры: 75х30х53 (см)</p>
-                    </div>
-                </div>
+                    let isBig = false
+
+                    if ((index % 5) === 1) isBig = true
+                    return <GalleryItem key={good.id} good={good} big={isBig} />
+                })}
             </div>
-            {/*</ul>*/}
+            <div className="gallery__section reverse">
+                {goods.filter(good => good.category === activeCategory).map((good, index, array) => {
+                    if (index <= (array.length - 1) / 2) return
+
+                    let isBig = false
+
+                    if ((index % 5) === 2) isBig = true
+                    return <GalleryItem key={good.id} good={good} big={isBig} />
+                })}
+            </div>
         </div>
+        {goods.find(good => good.category === activeCategory) ?
+            <></> :
+            <div className={'gallery-nothing'}>К сожалению, ничего не нашлось :)</div>}
     </BasicPage>
 }
 
