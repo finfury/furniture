@@ -3,9 +3,9 @@ import {Outlet} from 'react-router-dom';
 
 
 function StartPage(props) {
-    return <React.Fragment>
+    return <>
         <Outlet />
-    </React.Fragment>;
+    </>;
 }
 
 export default StartPage;

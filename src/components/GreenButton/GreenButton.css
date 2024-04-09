@@ -1,0 +1,21 @@
+.green-button {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    padding: 11px 30px;
+    border-radius: 30px;
+    background-color: var(--dark-green);
+    color: whitesmoke;
+    transition: all 0.2s ease;
+}
+
+.green-button:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (hover: hover) {
+    .green-button:hover {
+        background-color: var(--green);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+}

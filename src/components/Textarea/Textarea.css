@@ -1,0 +1,26 @@
+.textarea {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--dark-green);
+    overflow: hidden;
+    min-height: 100px;
+    resize: vertical;
+    transition: border, box-shadow 0.3s ease;
+}
+
+.textarea:focus {
+    border: 1px solid var(--green);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.textarea::placeholder {
+    color: var(--green);
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.textarea.focus::placeholder {
+    opacity: 0;
+}

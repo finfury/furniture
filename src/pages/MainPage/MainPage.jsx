@@ -1,9 +1,9 @@
 import React from 'react';
 import MainSlider from '../../components/MainSlider/MainSlider.jsx'
-import './MainPage.css'
 import Section from '../../components/Section/Section.jsx'
 import Process from '../../components/Process/Process.jsx'
 import BasicPage from '../BasicPage/BasicPage.jsx'
+import './MainPage.css'
 
 
 function MainPage() {

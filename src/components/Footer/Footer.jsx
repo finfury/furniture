@@ -1,5 +1,7 @@
 import React from 'react';
 import './Footer.css'
+import GreenButton from '../GreenButton/GreenButton.jsx'
+import Input from '../Input/Input.jsx'
 
 
 function Footer() {
@@ -17,9 +19,8 @@ function Footer() {
                         <span>ouremailaddress@email.com</span>
                     </a>
                     <form name={'feedback'} className="footer__form">
-                        <input type="text" className="footer__form_input"
-                               placeholder={'Введите свою почту'} />
-                        <button className="footer__form_button">Отправить</button>
+                        <Input placeholder="Введите свою почту" />
+                        <GreenButton>Отправить</GreenButton>
                     </form>
                 </div>
                 <ul className="footer__network footer-links">

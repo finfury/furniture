@@ -43,10 +43,10 @@
     transition: all 0.3s ease;
 }
 @media (hover: hover) {
-    .header__menu_item:hover {
+    .header__menu_item:hover, .header__menu_item:focus {
         color: var(--light-green);
     }
-    .header__menu_item.active:hover {
+    .header__menu_item.active:hover, .header__menu_item.active:focus {
         color: var(--dark-green);
     }
 }
