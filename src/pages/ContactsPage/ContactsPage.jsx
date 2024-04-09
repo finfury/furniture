@@ -1,18 +1,17 @@
 import React from 'react';
 import './ContactsPage.css'
-import Header from '../../components/Header/Header.jsx'
 import GreenButton from '../../components/GreenButton/GreenButton.jsx'
 import Input from '../../components/Input/Input.jsx'
 import Textarea from '../../components/Textarea/Textarea.jsx'
+import {mapURL} from '../../static/static.js'
 
 
 function ContactsPage() {
     return <React.Fragment>
-        <Header />
         <div className={'contacts header-padding-top'}>
             <div className="contacts__map">
                 <iframe className="contacts__map_iframe"
-                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A0469fb0e217e9dbdb1758139b4566bc84f4de607043cdc74de1ecd13649da978&amp;source=constructor"></iframe>
+                        src={mapURL}></iframe>
             </div>
             <div className="contacts__feedback">
                 <form name="feedback" className="contacts__feedback_form feedback-form">

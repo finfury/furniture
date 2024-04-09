@@ -1,10 +1,16 @@
 import React, {useState} from 'react';
 import './Header.css'
 import {NavLink} from 'react-router-dom'
+import {bodyLock} from '../../helpers/lock.js'
 
 
 function Header() {
     const [isActiveMenu, setIsActiveMenu] = useState(false)
+
+    const clickBurgerHandler = () => {
+        setIsActiveMenu(!isActiveMenu)
+        bodyLock(!isActiveMenu)
+    }
 
     return <header className={'header'}>
         <div className="container">
@@ -14,7 +20,7 @@ function Header() {
                     <NavLink to={'/gallery'} className="header__menu_item">Каталог</NavLink>
                 </div>
                 <div className="header__section section-img">
-                    <NavLink to={'/main'} className="header__menu_item">
+                    <NavLink to={'/main'} className="header__menu_item img">
                         <img src="../../../img/logo.png" alt="lorem tagline" className="header__menu_logo" />
                     </NavLink>
                 </div>
@@ -25,7 +31,7 @@ function Header() {
             </nav>
             <div className={isActiveMenu ? "header__burger active" : "header__burger"}>
                 <img src="../../../img/logo.png" alt="lorem tagline" className="header__burger_logo"></img>
-                <div className={"header__burger_icon"} onClick={() => setIsActiveMenu(!isActiveMenu)}>
+                <div className={"header__burger_icon"} onClick={() => clickBurgerHandler()}>
                     <span></span>
                     <span></span>
                     <span></span>
