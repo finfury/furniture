@@ -10,6 +10,7 @@
 .good-slide {
     position: relative;
     padding: 45%;
+    outline: none;
 }
 
 .good-slide_img {
@@ -198,11 +199,11 @@
 
     .slider-arrow_icon.next {
         transform: translate(0);
-        right: 10px;
+        right: 15px;
     }
 
     .slider-arrow_icon.prev {
         transform: translate(0);
-        left: 10px;
+        left: 15px;
     }
 }

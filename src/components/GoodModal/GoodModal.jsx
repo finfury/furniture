@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {Rating} from '@mui/material'
 import Slider from 'react-slick'
 import './GoodModal.css'
+import GreenButton from '../GreenButton/GreenButton.jsx'
 
 
 const SlickButtonFix = ({currentSlide, slideCount, children, ...props}) => (
@@ -71,7 +72,7 @@ function GoodModal({setActiveModal}) {
                             }} />
                     <span className="good__feedback_rating-value">({value})</span>
                 </div>
-                <button className="good__feedback_button footer__form_button">Оставить отзыв</button>
+                <GreenButton>Оставить отзыв</GreenButton>
             </div>
         </div>
         <div className="good__info">

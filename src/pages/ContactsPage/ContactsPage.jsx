@@ -1,6 +1,9 @@
 import React from 'react';
 import './ContactsPage.css'
 import Header from '../../components/Header/Header.jsx'
+import GreenButton from '../../components/GreenButton/GreenButton.jsx'
+import Input from '../../components/Input/Input.jsx'
+import Textarea from '../../components/Textarea/Textarea.jsx'
 
 
 function ContactsPage() {
@@ -25,21 +28,21 @@ function ContactsPage() {
                     </a>
                     <div className="feedback-form__entries">
                         <div className="feedback-form__user">
-                            <input type="text" className="footer__form_input feedback-form__user_input" placeholder="Ваше имя"/>
-                            <input type="text" className="footer__form_input feedback-form__user_input" placeholder="Номер телефона"/>
-                            <input type="email" className="footer__form_input feedback-form__user_input" placeholder="Адрес электронной почты"/>
+                            <Input placeholder="Ваше имя"/>
+                            <Input placeholder="Номер телефона"/>
+                            <Input type="email" placeholder="Адрес электронной почты"/>
                         </div>
                         <div className="feedback-form__message">
-                            <textarea className="footer__form_input feedback-form__message_textarea" placeholder="Ваше сообщение"></textarea>
+                            <Textarea placeholder="Ваше сообщение"/>
                         </div>
                         <div className="feedback-form__send">
-                            <button className="footer__form_button feedback-form__send_btn">Отправить</button>
+                            <GreenButton>Отправить</GreenButton>
                         </div>
                     </div>
                 </form>
             </div>
             <div className="footer__copyright">
-                <p className="footer__copyright_text">@Copyright 2024</p>
+                <p className="footer__copyright_text">@ Copyright 2024</p>
             </div>
         </div>
     </React.Fragment>
