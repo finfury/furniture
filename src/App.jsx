@@ -10,18 +10,16 @@ import './App.css'
 
 
 function App() {
-    return <div className={'App wrapper'}>
-        <Routes>
-            <Route path={'/'} element={<StartPage />}>
-                <Route path={'main'} element={<MainPage />} />
-                <Route path={'about'} element={<AboutPage />} />
-                <Route path={'contacts'} element={<ContactsPage />} />
-                <Route path={'gallery'} element={<GalleryPage />} />
-                <Route path={'good'} element={<GoodPage />} />
-            </Route>
-            <Route path={'*'} element={<NotFoundPage />} />
-        </Routes>
-    </div>;
+    return <Routes>
+        <Route path={'/'} element={<StartPage />}>
+            <Route path={'main'} element={<MainPage />} />
+            <Route path={'about'} element={<AboutPage />} />
+            <Route path={'contacts'} element={<ContactsPage />} />
+            <Route path={'gallery'} element={<GalleryPage />} />
+            <Route path={'good'} element={<GoodPage />} />
+        </Route>
+        <Route path={'*'} element={<NotFoundPage />} />
+    </Routes>
 }
 
 export default App;
