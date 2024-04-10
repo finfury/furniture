@@ -2,16 +2,23 @@ import React, {useState} from 'react';
 import './GalleryItem.css'
 import GoodModal from '../GoodModal/GoodModal.jsx'
 import Modal from '../Modal/Modal.jsx'
+import {bodyLock} from '../../helpers/lock.js'
 
 
 function GalleryItem({good, big = false}) {
     const [activeModal, setActiveModal] = useState(false)
+
+    const clickItemGalleryHandler = () => {
+        bodyLock(true)
+        setActiveModal(true)
+    }
 
     return <>
         <Modal active={activeModal} setActive={setActiveModal}>
             <GoodModal setActiveModal={setActiveModal} good={good} />
         </Modal>
         <div className={big ? "item-gallery big" : "item-gallery"}
+             onClick={() => clickItemGalleryHandler()}
              onClick={() => setActiveModal(true)}
              key={good.id}>
             <div className="item-gallery__photo">
