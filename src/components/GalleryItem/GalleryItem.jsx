@@ -19,7 +19,6 @@ function GalleryItem({good, big = false}) {
         </Modal>
         <div className={big ? "item-gallery big" : "item-gallery"}
              onClick={() => clickItemGalleryHandler()}
-             onClick={() => setActiveModal(true)}
              key={good.id}>
             <div className="item-gallery__photo">
                 <img src={"../../../img/" + good.poster} className="item-gallery__photo_img" />
